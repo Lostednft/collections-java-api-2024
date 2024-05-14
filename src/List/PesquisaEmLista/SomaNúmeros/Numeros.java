@@ -1,4 +1,4 @@
-package PesquisaEmLista.SomaNúmeros;
+package List.PesquisaEmLista.SomaNúmeros;
 
 public class Numeros
 {

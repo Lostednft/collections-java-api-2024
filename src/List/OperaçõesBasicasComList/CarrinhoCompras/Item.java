@@ -1,4 +1,4 @@
-package OperaçõesBasicasComList.CarrinhoCompras;
+package List.OperaçõesBasicasComList.CarrinhoCompras;
 
 public class Item {
 

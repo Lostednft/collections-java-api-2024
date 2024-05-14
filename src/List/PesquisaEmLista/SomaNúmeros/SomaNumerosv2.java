@@ -1,23 +1,18 @@
-package PesquisaEmLista.SomaNúmeros;
+package List.PesquisaEmLista.SomaNúmeros;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class SomaNumeros {
+public class SomaNumerosv2
+{
 
     //atributos
-    List<Numeros> numerosList;
-
-    //construtor
-    public SomaNumeros() {
-        this.numerosList = new ArrayList<>();
-    }
+    List<Integer> numerosList;
 
 
     //TODO: Metodo para criar uma lista com um numero.
     public void adicionarNumero(int num)
     {
-        numerosList.add(new Numeros(num));
+        numerosList.add(num);
     }
 
     public int calcularSoma()
@@ -25,9 +20,9 @@ public class SomaNumeros {
         int numeroTotal = 0;
         if(!numerosList.isEmpty())
         {
-            for (Numeros i: numerosList)
+            for (Integer i: numerosList)
             {
-                numeroTotal += i.getNumero();
+                numeroTotal += i;
             }
         }
         return numeroTotal;
@@ -39,11 +34,11 @@ public class SomaNumeros {
         int numeroMaior = 0;
         if(!numerosList.isEmpty())
         {
-            for (Numeros i: numerosList)
+            for (Integer i: numerosList)
             {
-                if(numeroMaior <= i.getNumero())
+                if(numeroMaior <= i)
                 {
-                    numeroMaior = i.getNumero();
+                    numeroMaior = i;
                 }
             }
         }
@@ -54,22 +49,15 @@ public class SomaNumeros {
     //TODO: Metodo para encontrar o menor numero da Lista de Numeros.
     public int encontrarMenorNumero()
     {
-        int numeroMenor = 0;
-        int contador = 0;
+        int numeroMenor = Integer.MAX_VALUE;
         if(!numerosList.isEmpty())
         {
-            for (Numeros i: numerosList)
+            for (Integer i: numerosList)
             {
-                if (contador < 1)
+                if(numeroMenor > i)
                 {
-                    numeroMenor = i.getNumero();
+                    numeroMenor = i;
                 }
-
-                if(numeroMenor > i.getNumero())
-                {
-                    numeroMenor = i.getNumero();
-                }
-                contador++;
             }
         }
         return numeroMenor;

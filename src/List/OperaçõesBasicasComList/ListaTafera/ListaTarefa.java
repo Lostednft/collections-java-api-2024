@@ -1,4 +1,4 @@
-package OperaçõesBasicasComList.ListaTafera;
+package List.OperaçõesBasicasComList.ListaTafera;
 
 import java.util.ArrayList;
 import java.util.List;

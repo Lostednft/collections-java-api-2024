@@ -1,4 +1,4 @@
-package OrdenaçãoList.OrdenaçãoPessoas;
+package List.OrdenaçãoList.OrdenaçãoPessoas;
 
 import java.util.*;
 
@@ -16,8 +16,9 @@ public class OrdenacaoPessoas {
 
     public List<Pessoa> ordenarPorIdade()
     {
-        Collections.sort(pessoaList);
-        return pessoaList;
+        List<Pessoa> pessoaPorIdade = new ArrayList<>(pessoaList);
+        Collections.sort(pessoaPorIdade);
+        return pessoaPorIdade;
     }
 
     public List<Pessoa> ordenarPorAltura()
